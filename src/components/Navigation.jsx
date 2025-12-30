@@ -54,5 +54,4 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
     </nav>
   );
 };
-
 export default Navigation;
