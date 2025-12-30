@@ -1,10 +1,18 @@
-
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Code, Smartphone, Zap, Mail, Phone, CheckCircle, ArrowRight, Sparkles } from 'lucide-react';
+import React, { useState } from 'react';
+import { Menu, X, Code } from 'lucide-react';
 
 const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
   const menuItems = ['home', 'services', 'projects', 'capabilities', 'contact'];
-
+  
+  const handleNavClick = (e, item) => {
+    e.preventDefault();
+    const element = document.getElementById(item);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+  
   return (
     <nav className="fixed top-0 w-full bg-black/80 backdrop-blur-xl z-40 border-b border-zinc-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,12 +25,12 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
               WebCraft
             </span>
           </div>
-
           <div className="hidden md:flex space-x-8">
             {menuItems.map((item) => (
               <a
                 key={item}
                 href={`#${item}`}
+                onClick={(e) => handleNavClick(e, item)}
                 className="text-gray-300 hover:text-white transition-colors duration-300 capitalize relative group"
               >
                 {item}
@@ -30,21 +38,19 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
               </a>
             ))}
           </div>
-
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-white">
             {isMenuOpen ? <X /> : <Menu />}
           </button>
         </div>
       </div>
-
       {isMenuOpen && (
         <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-zinc-800">
           {menuItems.map((item) => (
             <a
               key={item}
               href={`#${item}`}
+              onClick={(e) => handleNavClick(e, item)}
               className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-zinc-900 transition-all capitalize"
-              onClick={() => setIsMenuOpen(false)}
             >
               {item}
             </a>
@@ -54,4 +60,5 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
     </nav>
   );
 };
+
 export default Navigation;
