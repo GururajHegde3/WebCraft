@@ -22,7 +22,7 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
             {menuItems.map((item) => (
               <a
                 key={item}
-                href={`${item}`}
+                href={`#${item}`}
                 className="text-gray-300 hover:text-white transition-colors duration-300 capitalize relative group"
               >
                 {item}
@@ -42,7 +42,7 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
           {menuItems.map((item) => (
             <a
               key={item}
-              href={`${item}`}
+              href={`#${item}`}
               className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-zinc-900 transition-all capitalize"
               onClick={() => setIsMenuOpen(false)}
             >
