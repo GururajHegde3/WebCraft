@@ -3,7 +3,7 @@ import { Menu, X, Code, Smartphone, Zap, Mail, Phone, CheckCircle, ArrowRight, S
 
 const ContactSection = ({ visibleSections, formData, setFormData, handleSubmit }) => {
   const contactInfo = [
-    { icon: <Mail className="w-6 h-6" />, title: "Email Us", info: "webcraft.codes@gmail.com", href: "mailto:webcraft.codes@gmail.com" },
+    { icon: <Mail className="w-6 h-6" />, title: "Email Us", info: "dexiradevs@gmail.com", href: "mailto:dexiradevs@gmail.com" },
     { icon: <Phone className="w-6 h-6" />, title: "Call Us", info: "+91 7090136876", href: "tel:+917090136876" }
   ];
 
@@ -79,4 +79,5 @@ const ContactSection = ({ visibleSections, formData, setFormData, handleSubmit }
     </section>
   );
 };
+
 export default ContactSection;
