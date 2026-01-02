@@ -72,7 +72,7 @@ export default function Portfolio() {
         `Name: ${formData.name}\n\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
       );
       
-      window.location.href = `mailto:webcraft.codes@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:dexiradevs@gmail.com?subject=${subject}&body=${body}`;
       
       setTimeout(() => {
         alert('Thank you for reaching out! Your email client has been opened. Please send the email to complete your message.');
@@ -138,4 +138,5 @@ export default function Portfolio() {
       `}</style>
     </div>
   );
+
 }
