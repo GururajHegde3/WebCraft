@@ -22,7 +22,7 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
               <Code className="w-6 h-6" />
             </div>
             <span className="text-2xl font-bold bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
-              WebCraft
+              Dexira Devs
             </span>
           </div>
           <div className="hidden md:flex space-x-8">
@@ -62,3 +62,4 @@ const Navigation = ({ isMenuOpen, setIsMenuOpen }) => {
 };
 
 export default Navigation;
+
